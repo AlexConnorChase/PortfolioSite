@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [bodyState, setBS] = useState(0);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppHeader />
+      <AppBody />
     </div>
+  );
+}
+
+function AppHeader() {
+  return (
+    <header className="App-header">
+      <nav>
+        <p>Welcome</p>
+        <p>Projects</p>
+        <p>Socials</p>
+      </nav>
+    </header>
+  );
+}
+
+function AppBody({ sectVal }) {
+  return (
+    <body className="App-body">
+      <section className="Welcome">
+        <div>
+          <h1>Hello, my name is Alex Chase</h1>
+          <p>
+            I am a new grad software developer, and this is my portfolio
+            website!
+          </p>
+          <p>
+            Feel free to look around, I'm still getting things in order here.
+          </p>
+        </div>
+      </section>
+    </body>
   );
 }
 
