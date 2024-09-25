@@ -2,7 +2,6 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [bodyState, setBS] = useState(0);
   return (
     <div className="App">
       <AppHeader />
@@ -15,30 +14,45 @@ function AppHeader() {
   return (
     <header className="App-header">
       <nav>
-        <p>Welcome</p>
-        <p>Projects</p>
-        <p>Socials</p>
+        <a href="#Welcome">Welcome</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Socials">Socials</a>
       </nav>
     </header>
   );
 }
 
-function AppBody({ sectVal }) {
+function AppBody() {
   return (
     <body className="App-body">
-      <section className="Welcome">
-        <div>
-          <h1>Hello, my name is Alex Chase</h1>
-          <p>
-            I am a new grad software developer, and this is my portfolio
-            website!
-          </p>
-          <p>
-            Feel free to look around, I'm still getting things in order here.
-          </p>
-        </div>
-      </section>
+      <WelcomeSection />
+      <ProjectsSection />
     </body>
+  );
+}
+
+function WelcomeSection() {
+  return (
+    <section className="Welcome">
+      <div>
+        <h1>WELCOME!</h1>
+        <p>
+          Hello, my name is Alex Chase. I am a new grad software developer, and
+          this is my portfolio website!
+        </p>
+        <p>Feel free to look around, I'm still getting things in order here.</p>
+      </div>
+    </section>
+  );
+}
+
+function ProjectsSection() {
+  return (
+    <section className="Projects">
+      <div>
+        <h1>PROJECTS</h1>
+      </div>
+    </section>
   );
 }
 
