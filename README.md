@@ -2,6 +2,16 @@
 
 Here is the link for the website: https://alexconnorchase.github.io/PortfolioSite/
 
+## Building, pushing, and other console commands
+
+To build a new live version of the site, run
+`npm run deploy`
+
+To push current changes to main for storage, run
+`git add .`
+`git commit -m "Message Here"`
+`git push -u origin main`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
