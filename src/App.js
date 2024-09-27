@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LIlogo from "./icons8-linkedin.svg";
 import GHlogo from "./icons8-github-48.svg";
 
