@@ -3,6 +3,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LIlogo from "./icons8-linkedin.svg";
 import GHlogo from "./icons8-github-48.svg";
+import FDIOsnap from "./FigureDrawingIO.JPG";
 
 function App() {
   return (
@@ -37,9 +38,9 @@ function AppBody() {
 
 function WelcomeSection() {
   return (
-    <section className="Welcome">
-      <div className="about-me">
-        <h1>WELCOME!</h1>
+    <section id="Welcome">
+      <div id="about-me">
+        <h1>About Me</h1>
         <p>
           Hello, my name is Alex Chase. I am a new grad software developer, and
           this is my portfolio website!
@@ -88,9 +89,24 @@ function WelcomeSection() {
 
 function ProjectsSection() {
   return (
-    <section className="Projects">
-      <div>
-        <h1>PROJECTS</h1>
+    <section id="Projects">
+      <h1 id="projects-header">PROJECTS</h1>
+      <div id="projects-section">
+        <div id="project-display-back">
+          <div className="project-block">
+            <a
+              target="_blank"
+              rel="norefferer"
+              href="https://alexconnorchase.github.io/FigureDrawingIO/"
+            >
+              <img
+                src={FDIOsnap}
+                alt="Snapshot of Figure Drwing IO website, a project by Alex Chase"
+              />
+              <p>FigureDrawingIO</p>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -98,53 +114,57 @@ function ProjectsSection() {
 
 function SocialsSection() {
   return (
-    <section className="Socials">
-      <h1>SOCIALS</h1>
-      <div className="BadgeSpan">
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.linkedin.com/in/alex-chase-5b915519b/"
-        >
-          <img
-            src={LIlogo}
-            alt="Linked In logo used as link to Alex Chase's profile"
-          />
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://github.com/AlexConnorChase"
-        >
-          <img
-            src={GHlogo}
-            alt="Git Hub logo used as link to Alex Chase's profile"
-          />
-        </a>
+    <section id="Socials">
+      <div id="socials-section">
+        <h1>SOCIALS</h1>
+        <div className="BadgeSpan">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/alex-chase-5b915519b/"
+          >
+            <img
+              src={LIlogo}
+              alt="Linked In logo used as link to Alex Chase's profile"
+            />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/AlexConnorChase"
+          >
+            <img
+              src={GHlogo}
+              alt="Git Hub logo used as link to Alex Chase's profile"
+            />
+          </a>
+        </div>
+        <div id="credit-links">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://icons8.com/icon/8808/linkedin"
+          >
+            LinkedIn
+          </a>{" "}
+          icon by{" "}
+          <a target="_blank" rel="noreferrer" href="https://icons8.com">
+            Icons8
+          </a>
+          <p> </p>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://icons8.com/icon/106567/github"
+          >
+            GitHub
+          </a>{" "}
+          icon by
+          <a target="_blank" rel="noreferrer" href="https://icons8.com">
+            Icons8
+          </a>
+        </div>
       </div>
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://icons8.com/icon/8808/linkedin"
-      >
-        LinkedIn
-      </a>{" "}
-      icon by{" "}
-      <a target="_blank" rel="noreferrer" href="https://icons8.com">
-        Icons8
-      </a>
-      <p> </p>
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://icons8.com/icon/106567/github"
-      >
-        GitHub
-      </a>{" "}
-      icon by
-      <a target="_blank" rel="noreferrer" href="https://icons8.com">
-        Icons8
-      </a>
     </section>
   );
 }
