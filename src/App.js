@@ -1,9 +1,11 @@
 import "./App.css";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LIlogo from "./icons8-linkedin.svg";
-import GHlogo from "./icons8-github-48.svg";
-import FDIOsnap from "./FigureDrawingIO.JPG";
+import LIlogo from "./images/icons8-linkedin.svg";
+import GHlogo from "./images/icons8-github-48.svg";
+import FDIOsnap from "./images/FigureDrawingIO.JPG";
+import UFR from "./images/UFRepo.JPG";
+import FCCR from "./images/FCCR.JPG";
 
 function App() {
   return (
@@ -93,22 +95,38 @@ function ProjectsSection() {
       <h1 id="projects-header">PROJECTS</h1>
       <div id="projects-section">
         <div id="project-display-back">
-          <div className="project-block">
-            <a
-              target="_blank"
-              rel="norefferer"
-              href="https://alexconnorchase.github.io/FigureDrawingIO/"
-            >
-              <img
-                src={FDIOsnap}
-                alt="Snapshot of Figure Drwing IO website, a project by Alex Chase"
-              />
-              <p>FigureDrawingIO</p>
-            </a>
-          </div>
+          <ProjectBlock
+            link="https://alexconnorchase.github.io/FigureDrawingIO/"
+            img={FDIOsnap}
+            altTxt="Snapshot of Figure Drwing IO website, a project by Alex Chase"
+            cardTitle="FigureDrawingIO"
+          />
+          <ProjectBlock
+            link="https://github.com/AlexConnorChase/FreeCodeCampProjects"
+            img={FCCR}
+            altTxt="Snapshot of Free Code Camp Projects Repo, by Alex Chase"
+            cardTitle="FreeCodeCamp Projects"
+          />
+          <ProjectBlock
+            link="https://github.com/AlexConnorChase/UF_Projects_Repository"
+            img={UFR}
+            altTxt="Snapshot of School Projects Repo, by Alex Chase"
+            cardTitle="Old School Assignments"
+          />
         </div>
       </div>
     </section>
+  );
+}
+
+function ProjectBlock(props) {
+  return (
+    <div className="project-block">
+      <a target="_blank" rel="norefferer" href={props.link}>
+        <img src={props.img} alt={props.altTxt} />
+        <p>{props.cardTitle}</p>
+      </a>
+    </div>
   );
 }
 

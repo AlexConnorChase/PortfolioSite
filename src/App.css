@@ -51,7 +51,7 @@
 }
 
 #about-me {
-  width: 50%;
+  width: 60%;
   height: 100%;
 }
 
@@ -67,7 +67,7 @@
 
 #project-display-back {
   width: 70%;
-  height: 25vh;
+  height: 30vh;
   background-color: #5b719c;
   border-radius: 25px;
   overflow: scroll;
@@ -85,15 +85,22 @@
 
 .project-block {
   width: 30vh;
-  height: 21vh;
-  background-color: lavenderblush;
+  height: 20vh;
+  background-color: #734b7e;
   border-radius: 15px;
   margin: 2vh;
+  padding: 2vh;
+}
+
+.project-block > a {
+  text-decoration: none;
+  color: antiquewhite;
 }
 
 .project-block > a > img {
   width: 30vh;
   height: 15vh;
+  border: 1px solid white;
 }
 
 #Socials {
